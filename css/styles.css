@@ -1,6 +1,5 @@
-/* ПОМИЛКА: на body задано шрифт Arial замість Roboto */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #434455;
   background-color: #fff;
@@ -58,11 +57,9 @@ img {
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  /* ПОМИЛКА: неправильний розмір шрифту (20px замість 18px) */
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.17;
-  /* ПОМИЛКА: неправильний letter-spacing (0.05em замість 0.03em) */
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
 }
@@ -70,8 +67,7 @@ img {
 .section-title {
   margin-bottom: 72px;
 
-  /* ПОМИЛКА: неправильний розмір шрифту (40px замість 36px) */
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
@@ -84,8 +80,7 @@ img {
 
   font-weight: 500;
   font-size: 20px;
-  /* ПОМИЛКА: неправильний line-height (1.5 замість 1.2) */
-  line-height: 1.5;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
@@ -105,7 +100,6 @@ img {
   width: 40px;
   height: 40px;
 }
-
 .social-link {
   display: flex;
   align-items: center;
@@ -115,13 +109,12 @@ img {
   border-radius: 50%;
 
   background-color: #4d5ae5;
-  /* ПОМИЛКА: transition на hover замість базового селектора */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: #404bbf;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -185,18 +178,14 @@ img {
   padding: 24px 0;
 
   font-weight: 500;
-  /* ПОМИЛКА: неправильний line-height (1.2 замість 1.5) */
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  /* ПОМИЛКА: використання transition: all */
-  transition: all 300ms ease;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current {
   position: relative;
-  /* ПОМИЛКА: color задано прямо на .current, а не через :hover/:focus */
-  color: #404bbf;
 }
 
 .nav-link.current::after {
@@ -211,7 +200,7 @@ img {
 }
 
 .contacts {
-  /* ПОМИЛКА: font-style не скинуто (залишено italic) */
+  font-style: normal;
 }
 
 .nav-list,
@@ -225,11 +214,13 @@ img {
 
   line-height: 1.5;
   letter-spacing: 0.02em;
-  /* ПОМИЛКА: відсутня транзиція */
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link:focus,
+.nav-link.current,
 .contacts-link:hover,
 .contacts-link:focus {
   color: #404bbf;
@@ -259,10 +250,8 @@ img {
   max-width: 496px;
   margin: 0 auto 48px;
 
-  /* ПОМИЛКА: неправильний розмір шрифту (60px замість 56px) */
-  font-size: 60px;
-  /* ПОМИЛКА: неправильний line-height (1.2 замість 1.07) */
-  line-height: 1.2;
+  font-size: 56px;
+  line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
@@ -281,8 +270,7 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  /* ПОМИЛКА: неправильний letter-spacing (0.02em замість 0.04em) */
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -366,13 +354,12 @@ img {
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
-  /* ПОМИЛКА: transition на hover, а не на базовому селекторі */
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-thumb {
@@ -394,8 +381,7 @@ img {
   color: #f4f4fd;
 
   transform: translateY(100%);
-  /* ПОМИЛКА: неправильний таймінг (ease-in-out замість cubic-bezier) */
-  transition: transform 300ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -446,8 +432,7 @@ img {
 .footer-title {
   margin-bottom: 16px;
 
-  /* ПОМИЛКА: неправильний font-weight (700 замість 500) */
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
